@@ -29,7 +29,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    await update.message.reply_text("Привет! \n blabla\n :)", reply_markup=reply_markup)
+    await update.message.reply_text("Привет! \n blabla\t\tblabla\t\tblabla\t\tblabla\t\tblablablablablabla.\n :)", reply_markup=reply_markup)
 
 
 async def main_page(query) -> None:
@@ -48,7 +48,7 @@ async def main_page(query) -> None:
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    await query.edit_message_text("Привет! \n blabla\n :)", reply_markup=reply_markup)
+    await query.edit_message_text("Привет! \n blabla\t\tblabla\t\tblabla\t\tblabla\t\tblablablabla\n :)", reply_markup=reply_markup)
 
 
 async def about_us(query) -> None:
