@@ -61,7 +61,7 @@ async def main_page(query) -> None:
             buttons["about_us"]
         ],
         [
-            buttons["other_funcs"]
+            buttons["back_to_poster"]
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
