@@ -3,6 +3,7 @@ import logging
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CallbackQueryHandler, CommandHandler, ContextTypes
+from VK import get_description
 
 # Enable logging
 logging.basicConfig(
@@ -26,7 +27,7 @@ buttons = {
 texts = {
     "main": "Привет! \n blabla\t\tblabla\t\tblabla\t\tblabla\t\tblablablablablabla.\n :)",
     "support": "***Поддержим еблана👍***",
-    "about_us": "***Информация про КБрд***",
+    "about_us": get_description(),
     "poster": "***Афиша КБрд***",
     "buy_ticket": "***Операция покупки билета***",
     "about_event": "***О мероприятии***",
@@ -44,7 +45,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             buttons["about_us"]
         ],
         [
-            buttons["back_to_poster"]
+            buttons["other_funcs"]
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -61,7 +62,7 @@ async def main_page(query) -> None:
             buttons["about_us"]
         ],
         [
-            buttons["back_to_poster"]
+            buttons["other_funcs"]
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
