@@ -81,7 +81,7 @@ def get_description():
     url = (
         "https://api.vk.com/method/groups.getById?v={v}&group_id={group_id}&access_token={token}&fields={fields}".format(
             v=5.95,
-            group_id="kontorabrd",
+            group_id="levelupcyber",
             token=access_token,
             fields='description'))
     answer = requests.get(url, params=params).json()['response'][0]['description']
@@ -99,5 +99,5 @@ def get_catalog_info():
     return answer
 
 
-print(get_catalog_info())
+# print(get_catalog_info())
 # 202406
